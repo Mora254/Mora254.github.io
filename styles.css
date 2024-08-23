@@ -1,0 +1,517 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.top-box {
+    background-color: #ffffff;
+    padding: 20px; /* Aumenta el tamaño del recuadro blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ddd; /* Línea al final del recuadro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; /* Márgenes para separar el recuadro del borde de la página */
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    display: flex;
+    gap: 15px;
+}
+
+.top-box h1, .top-box p {
+    margin: 0;
+    background: linear-gradient(90deg, #33CCFF, #2699E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-box h1 {
+    font-size: 24px;
+}
+
+.top-box p {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.button.gray {
+    color: #808080; /* Color gris */
+}
+
+.button.gray:hover {
+    color: #606060; /* Un tono más oscuro de gris */
+}
+
+.button.blue {
+    background: linear-gradient(90deg, #0D33B3, #1A66CC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button.blue:hover {
+    color: #1A66CC; /* Azul sólido al hacer hover */
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+    width: 50%; /* Reduce el ancho de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Para asegurar que los bordes redondeados se apliquen también a la imagen */
+}
+/* Asegúrate de que el banner ocupe todo el ancho y alto del contenedor */
+.banner {
+    position: relative;
+    width: 80%;
+    height: 70vh; /* Altura completa de la ventana del navegador */
+    overflow: hidden; /* Oculta cualquier desbordamiento del video */
+}
+
+/* Asegura que el video cubra todo el contenedor */
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el contenedor sin deformar */
+}
+
+/* Estilo para el contenedor de texto sobre el video */
+.banner-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que el centro del contenedor esté en el centro del video */
+    color: #fff; /* Color del texto en blanco */
+    background:#AFEEEE (0, 0, 0, 0.5); /* Fondo semi-transparente para legibilidad */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilos para los elementos de texto */
+.banner-text h2, .banner-text h3 {
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    color: #fff; /* Asegura que el texto sea blanco */
+}
+
+/* Estilo para el encabezado principal */
+.banner-text h2 {
+    font-size: 2.5em; /* Tamaño de fuente para el encabezado principal */
+}
+
+/* Estilo para el encabezado secundario */
+.banner-text h3 {
+    font-size: 1.8em; /* Tamaño de fuente para el encabezado secundario */
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.info-block {
+    width: 45%;
+    margin: 10px;
+}
+
+.image-background {
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Aumenta la altura de la imagen */
+    width: 100%; /* Aumenta el ancho de la imagen */
+    position: relative;
+}
+
+.info-text {
+    position: absolute;
+    bottom: 20px; /* Posiciona el recuadro en la parte inferior */
+    left: 20px; /* Posiciona el recuadro en la esquina izquierda */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Ajusta el ancho del recuadro */
+}
+
+.info-text h2 {
+    margin-top: 0;
+}
+
+.info-text p {
+    color: #333;
+}
+
+.announcement-box {
+    background-color: #87CEEB; /* Fondo azul */
+    padding: 60px; /* Aumenta el padding para darle un tamaño grande */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Aumenta el ancho del recuadro */
+    margin: 20px auto; /* Centra el recuadro horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    position: relative; /* Posición relativa para las flechas */
+}
+
+#announcement-text {
+    font-size: 50px; /* Aumenta el tamaño del texto */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+}
+
+
+
+.arrow-left, .arrow-right {
+    position: absolute; /* Posición absoluta para las flechas */
+    top: 50%; /* Centra las flechas verticalmente */
+    transform: translateY(-50%); /* Centra las flechas verticalmente */
+    font-size: 24px; /* Aumenta el tamaño de las flechas */
+    color: #ffffff; /* Flechas blancas */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickable */
+}
+
+
+
+.arrow-left, .arrow-right {
+    position: absolute; /* Posición absoluta para las flechas */
+    top: 50%; /* Centra las flechas verticalmente */
+    transform: translateY(-50%); /* Centra las flechas verticalmente */
+    font-size: 24px; /* Aumenta el tamaño de las flechas */
+    color: #ffffff; /* Flechas blancas */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickable */
+}
+
+.arrow-left {
+    left: 20px; /* Mueve la flecha izquierda a la izquierda */
+}
+
+.arrow-right {
+    right: 20px; /* Mueve la flecha derecha a la derecha */
+}
+
+.contact-box {
+    display: flex; /* Establece un layout de flexbox */
+    justify-content: space-between; /* Distribuye los elementos en la línea */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 20px; /* Reduce el padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Aumenta el ancho del recuadro */
+    margin: 20px auto; /* Centra el recuadro horizontalmente */
+}
+
+.contact-info {
+    flex-basis: 45%; /* Reduce el ancho del elemento a 45% */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-location {
+    flex-basis: 45%; /* Reduce el ancho del elemento a 45% */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-title, #location-title {
+    font-size: 24px; /* Ajusta el tamaño del título */
+    color: #87CEEB; /* Título azul */
+    font-weight: bold;
+    margin-bottom: 20px; /* Añade un margen inferior al título */
+}
+
+#contact-text, #contact-address {
+    font-size: 18px; /* Ajusta el tamaño del texto */
+    color: #007bff; /* Texto azul */
+    margin-bottom: 20px; /* Añade un margen inferior al texto */
+}
+
+#contact-map {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: 150px; /* Ajusta el alto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que se ajuste al contenedor */
+}
+
+/* MISION, VISION Y OBJETIVOS*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #2f4f7f; /* Azul oscuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.btn-index {
+    background-color: #337ab7; /* Azul claro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+.btn-index:hover {
+    background-color: #23527c; /* Azul oscuro hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/*DATOS GENERALES*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #87CEFA; /* Azul oscuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.btn-index {
+    background-color: #337ab7; /* Azul claro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+.btn-index:hover {
+    background-color: #23527c; /* Azul oscuro hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/*MAS*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #87CEEB; /* Azul oscuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.btn-index {
+    background-color: #1E90FF; /* Azul claro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+
+.btn-index:hover {
+    background-color: #00BFFF;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 20px;
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.menu h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.menu p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+}
+/* Estilos específicos para la imagen del calendario escolar */
+.image-section {
+    text-align: center;
+}
+
+.calendar-image {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo claro */
+}
+
+/* Estilo para el contenedor principal */
+.top-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: #003366; /* Color de texto azul oscuro */
+    padding: 30px 20px; /* Aumento del padding para mayor altura */
+    border-bottom: 2px solid #003366; /* Línea de borde inferior azul oscuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mayor profundidad */
+}
+
+/* Estilo para la sección izquierda */
+.top-box .left h1 {
+    margin: 0;
+    font-size: 28px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Fuente en negrita */
+}
+
+.top-box .left p {
+    margin: 5px 0 0;
+    font-size: 18px; /* Tamaño de fuente más grande */
+}
+
+/* Estilo para la sección derecha */
+.top-box .right {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo para los botones */
+.top-box .right .button {
+    text-decoration: none;
+    color: #ffffff; /* Color de texto blanco */
+    background-color: #40E0D0; /* Color de fondo azul oscuro */
+    padding: 12px 24px; /* Tamaño de los botones ajustado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Fuente en negrita */
+    transition: background-color 0.3s; /* Efecto de transición para el color de fondo */
+}
+
+/* Estilo para el estado hover de los botones */
+.top-box .right .button:hover {
+    background-color: #002244; /* Color de fondo cuando se pasa el ratón */
+}
